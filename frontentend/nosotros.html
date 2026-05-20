@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Costa Link S.A.S.</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-principal scrolled">
+        <div class="header-izq">
+            <a href="index.html#inicio"><img src="img/costalink_logo.png" alt="Logo Costa Link" class="logo-grande"></a>
+        </div>
+
+        <nav class="header-centro menu-navegacion" id="menu-movil">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-der redes-header">
+            <a href="https://www.facebook.com/share/18MnDXYNCz/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/transportes_costa_link/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@transportes_costa_link" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="menu-toggle" id="btn-hamburguesa"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main style="padding-top: 150px; background-color: var(--blanco-puro);">
+        
+        <h1 class="titulo-seccion">Nuestra <span>Identidad</span></h1>
+        
+        <section class="nosotros-detalles">
+            <div class="nosotros-grid">
+                <div class="nosotros-card" data-aos="fade-up">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Misión</h3>
+                    <p>Brindar soluciones integrales de transporte terrestre con los más altos estándares de calidad, seguridad y eficiencia, superando las expectativas de nuestros clientes empresariales y particulares.</p>
+                </div>
+
+                <div class="nosotros-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visión</h3>
+                    <p>Posicionarnos para el 2030 como la empresa líder en movilidad y logística a nivel nacional, reconocidos por nuestra innovación tecnológica, flota moderna y compromiso ambiental.</p>
+                </div>
+
+                <div class="nosotros-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Valores</h3>
+                    <p>Cumplimiento, seguridad, respeto, innovación y vocación de servicio. Trabajamos día a día para que cada recorrido sea una experiencia de excelencia absoluta.</p>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="titulo-seccion" style="margin-top: 100px;">Nuestra <span>Ubicación</span></h1>
+        
+        <section class="seccion-mapa">
+            <div class="mapa-contenedor" data-aos="zoom-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5921820358896!2d-74.0645671!3d4.6665793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a5f78a873d9%3A0x1d5e6e34220c822e!2sCra.%2029A%20%2374-71%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1716213456789!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Transportes Costa Link S.A.S. | Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/573172860568" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+        const btnHamburguesa = document.getElementById('btn-hamburguesa');
+        const menuMovil = document.getElementById('menu-movil');
+        btnHamburguesa.addEventListener('click', () => {
+            menuMovil.classList.toggle('activo');
+            btnHamburguesa.innerHTML = menuMovil.classList.contains('activo') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    </script>
+</body>
+</html>

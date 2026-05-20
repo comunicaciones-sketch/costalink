@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros Clásicos | Costa Link S.A.S.</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-principal scrolled">
+        <div class="header-izq">
+            <a href="index.html#inicio"><img src="img/costalink_logo.png" alt="Logo Costa Link" class="logo-grande"></a>
+        </div>
+        <nav class="header-centro menu-navegacion" id="menu-movil">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-der redes-header">
+            <a href="https://www.facebook.com/share/18MnDXYNCz/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/transportes_costa_link/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@transportes_costa_link" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="menu-toggle" id="btn-hamburguesa"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main class="servicio-hero">
+        <div class="servicio-info" data-aos="fade-right">
+            <h1>Carros <span>Clásicos</span></h1>
+            <p>Elegancia y distinción exclusiva para bodas, quince años, eventos especiales y producciones audiovisuales. Haga que su momento sea inolvidable con una entrada con verdadero estilo vintage.</p>
+            <ul class="lista-detalles">
+                <li>Vehículos antiguos de colección restaurados y en estado impecable.</li>
+                <li>Servicio premium con conductor profesional vestido de gala.</li>
+                <li>Ideales para sesiones fotográficas corporativas, comerciales o bodas.</li>
+                <li>Arreglo y decoración opcional del carro acorde a la temática del evento.</li>
+            </ul>
+            <a href="index.html#contacto" class="btn-moderno">Solicitar Cotización</a>
+        </div>
+        <div class="servicio-imagen" data-aos="fade-left">
+            <img src="img/clasicos.png" alt="Vehículo Clásico Costa Link">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Transportes Costa Link S.A.S. | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+        const btn = document.getElementById('btn-hamburguesa'), menu = document.getElementById('menu-movil');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('activo');
+            btn.innerHTML = menu.classList.contains('activo') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    </script>
+</body>
+</html>

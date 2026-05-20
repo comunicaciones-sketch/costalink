@@ -3,38 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio VIP | Costa Link</title>
+    <title>Servicio VIP | Costa Link S.A.S.</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header-principal">
-        <div class="header-izq"><a href="index.html#inicio"><img src="img/costalink_logo.png" alt="Logo" class="logo-grande"></a></div>
-        <div class="header-derecha">
-            <nav class="menu-navegacion"><ul><li><a href="index.html#inicio">Inicio</a></li><li><a href="index.html#empresa">Empresa</a></li><li><a href="index.html#servicios">Servicios</a></li><li><a href="index.html#rastreo">Rastreo</a></li></ul></nav>
-            <div class="redes-header"><a href="https://www.facebook.com/share/18MnDXYNCz/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/transportes_costa_link/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@transportes_costa_link" target="_blank"><i class="fab fa-tiktok"></i></a></div>
+
+    <header class="header-principal scrolled">
+        <div class="header-izq">
+            <a href="index.html#inicio"><img src="img/costalink_logo.png" alt="Logo Costa Link" class="logo-grande"></a>
         </div>
+        <nav class="header-centro menu-navegacion" id="menu-movil">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-der redes-header">
+            <a href="https://www.facebook.com/share/18MnDXYNCz/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/transportes_costa_link/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@transportes_costa_link" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="menu-toggle" id="btn-hamburguesa"><i class="fas fa-bars"></i></div>
     </header>
-    <main>
-        <section class="servicio-hero" data-aos="fade-up" data-aos-duration="1000">
-            <div class="servicio-info">
-                <h1>Servicio <br><span style="color: var(--naranja);">VIP Premium</span></h1>
-                <p>Exclusividad, confort absoluto y máxima seguridad. Diseñado para ejecutivos, diplomáticos y clientes exigentes que requieren altos estándares de privacidad en sus traslados.</p>
-                <ul class="lista-detalles">
-                    <li>Conductores profesionales con entrenamiento evasivo.</li>
-                    <li>Absoluta confidencialidad y planeación de rutas de seguridad.</li>
-                    <li>Vehículos en estado impecable con servicio premium a bordo.</li>
-                    <li>Esquemas y disponibilidad 24/7 para eventos especiales.</li>
-                </ul>
-                <a href="index.html#contacto" class="btn-moderno">Solicitar Cotización</a>
-            </div>
-            <div class="servicio-imagen" data-aos="zoom-in" data-aos-duration="1200"><img src="img/vip.png" alt="VIP"></div>
-        </section>
+
+    <main class="servicio-hero">
+        <div class="servicio-info" data-aos="fade-right">
+            <h1>Servicio <span>VIP</span></h1>
+            <p>Esquemas de máxima seguridad, privacidad y vehículos de lujo para altos ejecutivos, diplomáticos y personalidades. Nos encargamos de toda la logística corporativa de alto nivel.</p>
+            <ul class="lista-detalles">
+                <li>Camionetas de alta gama (opción de vehículos blindados).</li>
+                <li>Conductores bilingües entrenados en seguridad y protocolo directivo.</li>
+                <li>Discreción absoluta, vidrios polarizados y rastreo continuo dedicado.</li>
+                <li>Coordinación de agendas corporativas y atención en aeropuerto.</li>
+            </ul>
+            <a href="index.html#contacto" class="btn-moderno">Solicitar Cotización</a>
+        </div>
+        <div class="servicio-imagen" data-aos="fade-left">
+            <img src="img/vip.png" alt="Vehículo VIP Costa Link">
+        </div>
     </main>
-    <footer class="footer"><p>&copy; 2026 Transportes Costa Link S.A.S. | Innovación en Movimiento.</p></footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({ once: true, offset: 50 });</script>
+
+    <footer class="footer">
+        <p>&copy; 2026 Transportes Costa Link S.A.S. | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+        const btn = document.getElementById('btn-hamburguesa'), menu = document.getElementById('menu-movil');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('activo');
+            btn.innerHTML = menu.classList.contains('activo') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    </script>
 </body>
 </html>
