@@ -21,17 +21,20 @@
         <div class="header-izq">
             <a href="#inicio"><img src="img/costalink_logo.png" alt="Logo Costa Link" class="logo-grande"></a>
         </div>
-
         <nav class="header-centro menu-navegacion" id="menu-movil">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                
+                <li class="solo-celular"><a href="trabaje-nosotros.html" style="color: #FB691C; font-weight: 700;">Trabaje con Nosotros</a></li>
             </ul>
         </nav>
+      
 
         <div class="header-der redes-header">
+            <a href="trabaje-nosotros.html" class="btn-trabaje-header">Trabaje con Nosotros</a>
             <a href="https://www.facebook.com/share/18MnDXYNCz/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/transportes_costa_link/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@transportes_costa_link" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -39,7 +42,7 @@
 
         <div class="menu-toggle" id="btn-hamburguesa">
             <i class="fas fa-bars"></i>
-        </div>
+        </div>  
     </header>
 
     <section id="inicio" class="hero">
@@ -203,44 +206,46 @@
         </div>
     </section>
 
-    <section id="contacto" class="seccion-contacto">
+<section id="contacto" class="seccion-contacto">
         <div class="contacto-contenedor">
             <div class="contacto-texto" data-aos="fade-right">
-                <h2>Trabaje con <span>Nosotros</span></h2>
-                <p>Llene el formulario con su requerimiento o adjunte su hoja de vida si desea postularse. Un asesor corporativo de Costa Link se comunicará con usted en la mayor brevedad posible.</p>
+                <h2>Impulse su <span>Logística</span></h2>
+                <p>Déjenos sus datos y los requerimientos de su empresa. Un asesor corporativo de Costa Link se comunicará con usted en menos de 24 horas para brindarle una solución a su medida.</p>
             </div>
             
             <div class="formulario-caja" data-aos="fade-left">
-                <h2>Centro de Gestión</h2>
+                <h2>Solicitar Cotización</h2>
                 <form id="formulario-contacto">
-                    <input type="text" name="nombre" placeholder="Nombre completo*" required>
-                    <input type="email" name="email" placeholder="Correo electrónico*" required>
+                    <input type="text" name="nombre" placeholder="Nombre o Razón Social*" required>
                     
-                    <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:20px; border: 1px solid #ddd;">
-                        <p style="font-size:18px; font-weight:600; color:var(--azul-corporativo); margin-bottom:10px;">Tipo de Cliente:</p>
-                        <div style="display: flex; gap: 20px; align-items: center; font-size: 18px; color: var(--gris-texto);">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <input type="email" name="email" placeholder="Correo corporativo*" required style="flex: 1; min-width: 200px;">
+                        <input type="text" name="telefono" placeholder="Teléfono*" required style="flex: 1; min-width: 200px;">
+                    </div>
+
+                    <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:15px; border: 1px solid #ddd;">
+                        <p style="font-size:15px; font-weight:600; color:var(--azul-corporativo); margin-bottom:10px;">Tipo de Cliente:</p>
+                        <div style="display: flex; gap: 20px; align-items: center; font-size: 14px; color: var(--gris-texto);">
                             <label style="display: flex; align-items: center; cursor: pointer;">
-                                <input type="radio" name="tipo_persona" value="natural" checked> Persona Natural
+                                <input type="radio" name="tipo_persona" value="empresa" checked> Empresa
                             </label>
                             <label style="display: flex; align-items: center; cursor: pointer;">
-                                <input type="radio" name="tipo_persona" value="empresa"> Empresa
+                                <input type="radio" name="tipo_persona" value="natural"> Persona Natural
                             </label>
                         </div>
                     </div>
-
-                    <input type="text" name="documento" placeholder="NIT o Cédula">
                     
                     <select name="servicio_interes" required>
-                        <option value="">¿Cuál es su requerimiento?</option>
-                        <option value="empresarial">Cotizar Empresarial</option>
-                        <option value="carga">Cotizar Carga</option>
-                        <option value="turismo">Cotizar Turismo</option>
-                        <option value="empleo">Postular Hoja de Vida</option>
+                        <option value="">¿Qué servicio desea cotizar?*</option>
+                        <option value="empresarial">Transporte Empresarial</option>
+                        <option value="carga">Carga Segura</option>
+                        <option value="turismo">Turismo / Eventos</option>
+                        <option value="vip">Servicio VIP</option>
                     </select>
 
-                    <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:20px; border: 1px solid #ddd;">
-                        <p style="font-size:18px; font-weight:600; color:var(--azul-corporativo); margin-bottom:10px;">Preferencia de Vehículo:</p>
-                        <div style="display: flex; gap: 20px; align-items: center; font-size: 18px; color: var(--gris-texto);">
+                    <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:15px; border: 1px solid #ddd;">
+                        <p style="font-size:15px; font-weight:600; color:var(--azul-corporativo); margin-bottom:10px;">Preferencia de Vehículo:</p>
+                        <div style="display: flex; gap: 20px; align-items: center; font-size: 14px; color: var(--gris-texto);">
                             <label style="display: flex; align-items: center; cursor: pointer;">
                                 <input type="radio" name="tipo_vehiculo" value="combustible" checked> Combustible
                             </label>
@@ -250,29 +255,25 @@
                         </div>
                     </div>
 
-                    <textarea name="mensaje" placeholder="Déjenos un mensaje..." rows="3"></textarea>
+                    <textarea name="mensaje" placeholder="Describa brevemente su ruta o necesidad..." rows="3" required></textarea>
                     
-                    <div class="caja-archivo">
-                        <label>Adjuntar CV/Requisitos (Opcional):</label>
-                        <input type="file" name="archivo_cv" accept=".pdf,.doc,.docx">
-                    </div>
-                    
-                    <button type="submit" class="btn-moderno" style="width: 100%;">Enviar Información</button>
+                    <button type="submit" class="btn-moderno" style="width: 100%;">Enviar Solicitud</button>
                 </form>
             </div>
         </div>
     </section>
-
-    <footer class="footer">
+<footer class="footer">
         <p>&copy; 2026 Transportes Costa Link S.A.S. | Todos los derechos reservados.</p>
     </footer>
 
     <a href="https://wa.me/573172860568" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
         AOS.init({ once: true, offset: 50 });
 
+        // LÓGICA DEL MENÚ Y SCROLL
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header-principal');
             if (window.scrollY > 50) {
@@ -307,14 +308,14 @@
             });
         });
 
-        // FUNCIONALIDAD FORMULARIO
+        // FUNCIONALIDAD FORMULARIO DE COTIZACIÓN
         const formContacto = document.getElementById('formulario-contacto');
         if(formContacto) {
             formContacto.addEventListener('submit', function(e) {
                 e.preventDefault();
 
                 Swal.fire({
-                    title: 'Enviando información...',
+                    title: 'Enviando solicitud...',
                     text: 'Por favor espere un momento.',
                     allowOutsideClick: false,
                     didOpen: () => { Swal.showLoading(); }
@@ -322,8 +323,8 @@
 
                 const formData = new FormData(this);
 
-                // 🛑 RECUERDE: Cambie 'localhost' por la IP (ej. 192.168.1.75) si va a probar en otros celulares 🛑
-                fetch('http://localhost:8000/subir-postulacion/', {
+                // ENRUTADO HACIA PHP EN VEZ DE PYTHON
+                fetch('procesar_cotizacion.php', { 
                     method: 'POST',
                     body: formData
                 })
@@ -334,8 +335,8 @@
                 .then(data => {
                     Swal.fire({
                         icon: 'success',
-                        title: '¡Mensaje Enviado!',
-                        text: 'Hemos recibido su información exitosamente. Nos pondremos en contacto pronto.',
+                        title: '¡Cotización Solicitada!',
+                        text: 'Hemos recibido sus requerimientos. Un asesor lo contactará pronto.',
                         confirmButtonColor: '#FB691C'
                     });
                     formContacto.reset();
@@ -343,11 +344,10 @@
                 .catch(error => {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Uy, algo falló',
-                        text: 'No pudimos enviar la información. Revise su conexión e intente de nuevo.',
+                        title: 'Error de envío',
+                        text: 'No pudimos procesar la solicitud en este momento.',
                         confirmButtonColor: '#0a192f'
                     });
-                    console.error('Error:', error);
                 });
             });
         }

@@ -60,18 +60,50 @@ a { text-decoration: none; transition: color 0.3s ease; }
 .menu-navegacion a:hover::after { width: 100%; left: 0; }
 
 .header-der { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 10px; z-index: 2002; }
-.redes-header a {
+
+/* 🛑 ÍCONOS DE REDES SOCIALES 🛑 */
+.redes-header a:not(.btn-trabaje-header) {
     background-color: rgba(255, 255, 255, 0.2); color: var(--blanco-puro);
     width: 38px; height: 38px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
     font-size: 16px; transition: all 0.3s ease;
 }
-.header-principal.scrolled .redes-header a { background-color: var(--gris-fondo); color: var(--azul-corporativo); }
-.redes-header a:hover, .header-principal.scrolled .redes-header a:hover { background-color: var(--naranja); color: var(--blanco-puro); transform: translateY(-2px); }
+.header-principal.scrolled .redes-header a:not(.btn-trabaje-header) { background-color: var(--gris-fondo); color: var(--azul-corporativo); }
+.redes-header a:not(.btn-trabaje-header):hover, .header-principal.scrolled .redes-header a:not(.btn-trabaje-header):hover { background-color: var(--naranja); color: var(--blanco-puro); transform: translateY(-2px); }
 
 .menu-toggle {
     display: none; background-color: var(--blanco-puro); color: var(--azul-corporativo); 
     width: 40px; height: 40px; border-radius: 6px; justify-content: center; align-items: center;
     font-size: 20px; cursor: pointer; z-index: 2005; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   BOTÓN TRABAJE CON NOSOTROS (HEADER)
+   ========================================== */
+.btn-trabaje-header {
+    background-color: var(--naranja);
+    color: var(--blanco-puro) !important; 
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 10px; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(251, 105, 28, 0.3);
+    white-space: nowrap; 
+}
+
+.btn-trabaje-header:hover {
+    background-color: var(--azul-corporativo);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(10, 25, 47, 0.2);
+}
+
+@media (max-width: 950px) {
+    .btn-trabaje-header {
+        display: none; 
+    }
 }
 
 /* ==========================================
@@ -268,3 +300,11 @@ a { text-decoration: none; transition: color 0.3s ease; }
 .electrica-img { flex: 1; min-width: 300px; text-align: center; }
 .electrica-img img { max-width: 100%; border-radius: 12px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4)); transition: transform 0.4s ease; }
 .electrica-img:hover img { transform: translateY(-10px); }
+/* ==========================================
+   OCULTAR ELEMENTOS DEL MENÚ MÓVIL EN PC
+   ========================================== */
+@media (min-width: 951px) {
+    .solo-celular {
+        display: none !important;
+    }
+}

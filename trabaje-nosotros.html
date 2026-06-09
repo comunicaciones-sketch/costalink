@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaje con Nosotros | Costa Link S.A.S.</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        /* Un ajustico rápido para esta página específica */
+        body { background-color: var(--azul-corporativo); }
+        .seccion-empleo { padding: 150px 5% 80px; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .caja-empleo { background-color: var(--blanco-puro); max-width: 700px; width: 100%; padding: 50px; border-radius: 15px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .caja-empleo h1 { text-align: center; margin-bottom: 10px; font-size: 35px; }
+        .caja-empleo p.subtitulo { text-align: center; color: var(--gris-suave); margin-bottom: 30px; font-size: 16px; }
+        
+        @media (max-width: 768px) {
+            .caja-empleo { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-principal scrolled">
+        <div class="header-izq">
+            <a href="index.html"><img src="img/costalink_logo.png" alt="Logo Costa Link" class="logo-grande"></a>
+        </div>
+        <nav class="header-centro menu-navegacion" id="menu-movil">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                
+                <li class="solo-celular"><a href="trabaje-nosotros.html" style="color: #FB691C; font-weight: 700;">Trabaje con Nosotros</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-der redes-header">
+            <a href="https://www.facebook.com/share/18MnDXYNCz/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/transportes_costa_link/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@transportes_costa_link" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="menu-toggle" id="btn-hamburguesa">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="seccion-empleo">
+        <div class="caja-empleo">
+            <h1>Únase a Nuestro Equipo</h1>
+            <p class="subtitulo">Complete el formulario y adjunte su hoja de vida actualizada para participar en nuestras convocatorias.</p>
+            
+            <form id="formulario-empleo" class="formulario-caja" style="box-shadow: none; padding: 0;">
+                <input type="text" name="nombre" placeholder="Nombre completo*" required>
+                
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <input type="email" name="email" placeholder="Correo electrónico*" required style="flex: 1; min-width: 250px;">
+                    <input type="text" name="telefono" placeholder="Teléfono / Celular*" required style="flex: 1; min-width: 250px;">
+                </div>
+
+                <input type="text" name="cedula" placeholder="Número de Cédula*" required>
+                
+                <select name="cargo" required>
+                    <option value="">¿A qué cargo aplica?*</option>
+                    <option value="conductor_pasajeros">Conductor - Transporte Especial/Pasajeros</option>
+                    <option value="logistica">Auxiliar de Logística / Ruta</option>
+                    <option value="administrativo">Área Administrativa / Oficina</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <select name="licencia">
+                    <option value="">Categoría de Licencia (Si aplica para conductor)</option>
+                    <option value="c2">C2</option>
+                    <option value="c3">C3</option>
+                    <option value="no_aplica">No aplica para mi cargo</option>
+                </select>
+
+                <textarea name="perfil" placeholder="Breve resumen de su perfil o experiencia (Opcional)..." rows="3"></textarea>
+                
+                <div class="caja-archivo">
+                    <label>Adjuntar Hoja de Vida (PDF)*:</label>
+                    <input type="file" name="hoja_vida" accept=".pdf,.doc,.docx" required>
+                </div>
+                
+                <button type="submit" class="btn-moderno" style="width: 100%;">Enviar Postulación</button>
+            </form>
+        </div>
+   </section>
+
+    <script>
+        // Lógica del menú hamburguesa (para celulares)
+        const btnHamburguesa = document.getElementById('btn-hamburguesa');
+        const menuMovil = document.getElementById('menu-movil');
+
+        if(btnHamburguesa) {
+            btnHamburguesa.addEventListener('click', () => {
+                menuMovil.classList.toggle('activo');
+                if (menuMovil.classList.contains('activo')) {
+                    btnHamburguesa.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    btnHamburguesa.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        }
+
+        // FUNCIONALIDAD FORMULARIO DE EMPLEO
+        const formEmpleo = document.getElementById('formulario-empleo');
+        if(formEmpleo) {
+            formEmpleo.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                Swal.fire({
+                    title: 'Subiendo postulación...',
+                    text: 'Estamos guardando su hoja de vida en el sistema.',
+                    allowOutsideClick: false,
+                    didOpen: () => { Swal.showLoading(); }
+                });
+
+                const formData = new FormData(this);
+
+                // 🛑 CORRECCIÓN: ENRUTADO HACIA PHP 🛑
+                fetch('procesar_postulacion.php', { 
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if(!response.ok) throw new Error('Error en el servidor');
+                    return response.json();
+                })
+                .then(data => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Postulación Exitosa!',
+                        text: 'Su hoja de vida ha sido registrada en nuestra base de datos de talento.',
+                        confirmButtonColor: '#FB691C'
+                    });
+                    formEmpleo.reset();
+                })
+                .catch(error => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Uy, falló la carga',
+                        text: 'Asegúrese de que el servidor esté corriendo e inténtelo de nuevo.',
+                        confirmButtonColor: '#0a192f'
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+</html>
