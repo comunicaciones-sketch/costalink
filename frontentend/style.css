@@ -93,36 +93,61 @@ a { text-decoration: none; transition: color 0.3s ease; }
 .btn-moderno:hover { background-color: var(--azul-corporativo); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(10, 25, 47, 0.3); }
 
 /* ==========================================
-   4. SECCIÓN EMPRESA (HOME)
+   4. SECCIÓN EMPRESA (AHORA AZUL CORPORATIVA)
    ========================================== */
-.seccion-empresa { padding: 80px 5%; background-color: var(--blanco-puro); }
+.seccion-empresa-azul { padding: 80px 5%; background-color: var(--azul-corporativo); }
 .empresa-contenedor { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; max-width: 1100px; margin: 0 auto; }
 .empresa-img { flex: 1; min-width: 300px; position: relative; } 
-.empresa-img img { width: 100%; border-radius: 8px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); position: relative; z-index: 2; }
-.empresa-img::after { content: ''; position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; background-color: var(--gris-fondo); border-radius: 8px; z-index: 1; }
-.empresa-texto { flex: 1; min-width: 300px; }
-.empresa-texto h2 { font-size: 36px; margin-bottom: 20px; line-height: 1.2; }
-.empresa-texto p { font-size: 16px; margin-bottom: 15px; color: var(--gris-suave); }
+.empresa-img img { width: 100%; border-radius: 8px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); position: relative; z-index: 2; }
+.empresa-img::after { content: ''; position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; background-color: var(--naranja); border-radius: 8px; z-index: 1; }
+.empresa-texto-blanco { flex: 1; min-width: 300px; }
+.empresa-texto-blanco h2 { font-size: 38px; margin-bottom: 20px; line-height: 1.2; color: var(--blanco-puro); }
+.empresa-texto-blanco h2 span { color: var(--naranja); }
+.empresa-texto-blanco p { font-size: 16px; margin-bottom: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
 
 /* ==========================================
-   5. SERVICIOS PRINCIPALES (GRID HOME)
+   5. NUESTRAS SOLUCIONES (DISEÑO HORIZONTAL Y 2 COLUMNAS)
    ========================================== */
-.seccion-servicios { padding: 80px 5%; background-color: var(--gris-fondo); }
-.grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.seccion-soluciones-nueva { padding: 100px 5%; background-color: var(--blanco-puro); }
+.contenedor-soluciones-nueva { max-width: 1200px; margin: 0 auto; }
 
-.servicio-card { 
-    background: var(--blanco-puro); border-radius: 12px; padding: 30px 20px; 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02); 
-    text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; 
+/* Título central súper elegante */
+.titulo-central { text-align: center; margin-bottom: 60px; }
+.titulo-central h2 { font-size: 42px; font-weight: 500; color: var(--azul-corporativo); margin-bottom: 15px; }
+.titulo-central h2 span { font-weight: 800; color: var(--naranja); }
+.linea-separadora-centro { width: 80px; height: 5px; background-color: var(--naranja); margin: 0 auto; border-radius: 3px; }
+
+/* Grid de 2 columnas exactas */
+.grid-servicios-animado { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; overflow: hidden; /* Evita barras de scroll por la animación */ }
+
+/* Tarjetas de Servicio (Tamaño perfecto) */
+.tarjeta-servicio-animada { 
+    background-color: var(--blanco-puro); 
+    border-radius: 25px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
 }
-.servicio-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(251, 105, 28, 0.08); }
+.tarjeta-servicio-animada:hover { transform: translateY(-8px); box-shadow: 0 20px 45px rgba(0,0,0,0.1); }
 
-.img-container { width: 100%; height: 140px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; }
-.img-container img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.4s ease; }
-.servicio-card:hover .img-container img { transform: scale(1.05); }
+/* Toda la tarjeta es un botón */
+.enlace-tarjeta-total { display: block; text-decoration: none; color: inherit; height: 100%; border-radius: 25px; overflow: hidden; }
 
-.servicio-card h3 { font-size: 20px; margin-bottom: 12px; }
-.servicio-card p { font-size: 14px; color: var(--gris-suave); margin-bottom: 0; line-height: 1.5; }
+/* Fondo y tamaño de los carros */
+.fondo-img-servicio {
+    width: 100%; height: 260px; 
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eded 100%); 
+    display: flex; justify-content: center; align-items: center; padding: 25px;
+}
+.fondo-img-servicio img { max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); transition: transform 0.5s ease; }
+.tarjeta-servicio-animada:hover .fondo-img-servicio img { transform: scale(1.08); }
+
+/* Textos */
+.info-tarjeta-servicio { padding: 30px 40px; text-align: center; }
+.info-tarjeta-servicio h3 { font-size: 24px; color: var(--azul-corporativo); margin-bottom: 12px; }
+.info-tarjeta-servicio p { font-size: 15px; color: var(--gris-suave); line-height: 1.6; margin-bottom: 20px; transition: color 0.3s ease; }
+
+.btn-detalle-tarjeta { display: inline-flex; align-items: center; gap: 8px; color: var(--naranja); font-weight: 700; font-size: 15px; text-transform: uppercase; transition: all 0.3s ease; }
+.tarjeta-servicio-animada:hover .btn-detalle-tarjeta { color: var(--azul-corporativo); transform: translateX(8px); }
 
 /* ==========================================
    6. VISTAS INTERNAS DE SERVICIOS (Ej: Empresarial)
@@ -220,4 +245,26 @@ a { text-decoration: none; transition: color 0.3s ease; }
     .seccion-empresa, .seccion-servicios, .seccion-rastreo, .seccion-contacto, .nosotros-detalles, .seccion-mapa { padding: 50px 5%; }
     .rastreo-img img { transform: scale(1); }
     .formulario-caja { padding: 25px 20px; }
+    
+    /* Ajustes responsive para las Soluciones de 2 columnas (Pasan a 1 columna) */
+    .titulo-central h2 { font-size: 35px; }
+    .grid-servicios-animado { grid-template-columns: 1fr; gap: 30px; }
+    .fondo-img-servicio { height: 220px; }
+    .info-tarjeta-servicio { padding: 25px 20px; }
 }
+
+/* ==========================================
+   12. SECCIÓN FLOTA ELÉCTRICA
+   ========================================== */
+.seccion-electrica { padding: 80px 5%; background-color: var(--azul-corporativo); color: var(--blanco-puro); }
+.electrica-contenedor { display: flex; flex-wrap: wrap; align-items: center; max-width: 1100px; margin: 0 auto; gap: 50px; flex-direction: row-reverse; } 
+.electrica-texto { flex: 1; min-width: 300px; }
+.electrica-texto h2 { font-size: 38px; margin-bottom: 20px; color: var(--blanco-puro); }
+.electrica-texto h2 span { color: var(--naranja); }
+.electrica-texto p { font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 25px; line-height: 1.6; }
+.lista-electrica { list-style: none; margin-bottom: 0; }
+.lista-electrica li { font-size: 16px; margin-bottom: 15px; color: rgba(255,255,255,0.9); font-weight: 500; display: flex; align-items: center; gap: 15px; }
+.lista-electrica li i { color: #25D366; font-size: 22px; } /* Iconos en verde ecológico */
+.electrica-img { flex: 1; min-width: 300px; text-align: center; }
+.electrica-img img { max-width: 100%; border-radius: 12px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4)); transition: transform 0.4s ease; }
+.electrica-img:hover img { transform: translateY(-10px); }
